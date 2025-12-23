@@ -14,9 +14,9 @@ export default function NavbarSR() {
                 <a href="/Mapa" className="hover:bg-feisty transition mr-90">Mapa</a>
                 <Image className="absolute w-60 left-88 hover:rotate-12 hover:transition transition" src="/images/SlowRisersLogo.webp" alt="logo Slow Risers" width={500} height={500} ></Image>
                 <a href="/Personagens" className="hover:bg-feisty transition">Personagens</a>
-                <a href="/" className="hover:bg-feisty">Surpresa</a>
+                <a href="/Galeria" className="hover:bg-feisty">Galeria</a>
             </div>
-        </nav>
+        </nav>  
 
     )
 
