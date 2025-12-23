@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
+  html {
+    scroll-behavior: smooth;
+    }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+@theme {
+  --color-vapid: #0A747B;
+  --color-feisty: #ADE280;
+  --color-underdog: #284374;
+  --color-vanished: #071B3D;
+  --color-wanderlust: #EBF2F2;
+
 }
 
 @media (prefers-color-scheme: dark) {
