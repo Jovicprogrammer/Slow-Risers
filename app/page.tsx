@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 
-export default function HomeSlowRisers() {
+export default function Home() {
 
     return (
 

@@ -1,10 +1,11 @@
+import { Dream_Orphans_Light } from "../fonts";
 
 
 export default function PlaylistSR() {
 
     return (
 
-        <div className={`flex items-center justify-center h-screen pt-10 `}>
+        <div className={`flex items-center justify-center h-screen pt-10 ${Dream_Orphans_Light.className}`}>
 
     <div>
         <h2 className="flex justify-center text-2xl pb-5">playlist do vesquicio.</h2>

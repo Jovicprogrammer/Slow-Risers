@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
 import { DreamOrphans, Dream_Orphans_Light, ElementaryGothic, Oskon } from './fonts';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const minhaFonte = localFont({
-  src: [
-    {
-      path: '../../public/fonts/ZtBrosOskon90s-Regular.otf',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
-  variable: '--zt-regular', // Opcional para usar com CSS variables
-})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +17,7 @@ export const metadata: Metadata = {
   title: "vesquicio.",
   description: "perdido em um sonho febril",
   icons: {
-  icon: 'images/vesquicio-icon.webp',
+    icon: '/images/vesquicio-icon.webp', // Note a barra inicial
   },
 };
 

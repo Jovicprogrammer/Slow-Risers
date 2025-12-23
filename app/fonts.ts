@@ -4,18 +4,18 @@ import localFont from 'next/font/local';
 export const DreamOrphans = localFont({
   src: [
     {
-      path: '../../fonts/Dream_Orphans.otf',
+      path: './fonts/Dream_Orphans.otf',
       weight: '400',
       style: 'normal',
     },
   ],
-  variable: '--font-dream', // Variável CSS
+  variable: '--font-dream',
   display: 'swap',
 });
 
 // Fonte 2 - Exemplo simples
 export const ElementaryGothic = localFont({
-  src: '../../public/fonts/Elementary_Gothic.otf',
+  src: './fonts/Elementary_Gothic.otf',
   variable: '--font-gothic',
   weight: '400',
   display: 'swap',
@@ -25,7 +25,7 @@ export const ElementaryGothic = localFont({
 export const Oskon = localFont({
   src: [
     {
-      path: '../../public/fonts/ZTBrosOskon90s-Regular.otf',
+      path: './fonts/ZTBrosOskon90s-Regular.otf',
       weight: '300',
     },
 
@@ -37,7 +37,7 @@ export const Oskon = localFont({
 export const Dream_Orphans_Light = localFont({
   src: [
     {
-      path: '../../public/fonts/Dream_Orphans_Light.otf',
+      path: './fonts/Dream_Orphans_Light.otf',
       weight: '300',
     },
 

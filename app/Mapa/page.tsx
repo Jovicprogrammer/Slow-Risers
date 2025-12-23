@@ -3,9 +3,9 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import NavbarSR from '@/components/Navbar-SR';
+import NavbarSR from '../components/Navbar';
 import { ElementaryGothic } from '../fonts';
-import VoltarVesquicio from '@/components/Slow-Risers/Voltar-Vesquicio';
+import FooterSR from '../components/Footer';
 
 // Tipos
 interface Location {
@@ -171,8 +171,8 @@ function LocationModal({ location, onClose }: LocationModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 bg-vanished/80 bg-opacity-80 z-[600] flex items-center justify-center p-2 animate-fadeIn">
-      <div className="bg-feisty rounded-2xl max-w-6xl w-full max-h-[100vh] overflow-hidden shadow-2xl animate-scaleIn">
+    <div className="fixed inset-0 bg-vanished/80 bg-opacity-80 z-600 flex items-center justify-center p-2 animate-fadeIn">
+      <div className="bg-feisty rounded-2xl max-w-6xl w-full max-h-screen overflow-hidden shadow-2xl animate-scaleIn">
         
         {/* Header */}
         <div className="flex items-center justify-between p-6 bg-feisty">
@@ -325,11 +325,11 @@ export default function InteractiveMap() {
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b bg-vapid to-vanished p-8">
+    <div className="min-h-screen bg-linear-to-b bg-vapid to-vanished p-8">
       <div className="max-w-7xl mx-auto">
 
         <NavbarSR/>
-        <VoltarVesquicio/>
+        
         
         {/* Header */}
         <div className="text-center mb-8">
@@ -353,7 +353,7 @@ export default function InteractiveMap() {
             />
             
             {/* Overlay decorativo */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
             
             {/* Pins das Localizações */}
             {locations.map((location) => (
@@ -366,7 +366,7 @@ export default function InteractiveMap() {
           </div>
 
           {/* Legenda */}
-          <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 border-t border-gray-200">
+          <div className="p-6 bg-linear-to-r from-purple-50 to-blue-50 border-t border-gray-200">
             <h3 className="text-lg font-bold text-gray-800 mb-3">Localizações Disponíveis:</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {locations.map((location) => (
@@ -391,6 +391,9 @@ export default function InteractiveMap() {
           onClose={() => setSelectedLocation(null)}
         />
       )}
+
+    <FooterSR />
+
     </div>
   );
 }

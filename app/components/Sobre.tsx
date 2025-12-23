@@ -1,10 +1,11 @@
+import { DreamOrphans } from "../fonts";
 
 
 export default function SobreSR() {
 
     return (
 
-        <div className={`grid grid-cols-2 items-center justify-center h-screen `}>
+        <div className={`grid grid-cols-2 items-center justify-center h-screen ${DreamOrphans.className}`}>
 
         <h2 className="ml-10 text-7xl">Sobre</h2>
 
