@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { X, Heart } from 'lucide-react';
 import NavbarSR from '../components/Navbar';
-import { ElementaryGothic } from '../fonts';
+import { DreamOrphans, ElementaryGothic } from '../fonts';
 import FooterSR from '../components/Footer';
 
 
@@ -45,10 +45,10 @@ const characters: Character[] = [
     fullBody: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=800&fit=crop",
     description: "Uma artista sonhadora que adora criar mundos fantásticos através de suas pinturas. Sempre com um sorriso no rosto e ideias criativas.",
     funFacts: [
-      { label: "Comida Favorita", value: "Pizza de 4 queijos 🍕", icon: "❤️" },
-      { label: "Hobby", value: "Pintura e desenho", icon: "🎨" },
-      { label: "Cor Favorita", value: "Rosa pastel", icon: "💗" },
-      { label: "Animal Favorito", value: "Gatos", icon: "🐱" },
+      { label: "Comida Favorita", value: "Pizza de 4 queijos", icon: "*" },
+      { label: "Hobby", value: "Pintura e desenho", icon: "*" },
+      { label: "Cor Favorita", value: "Rosa pastel", icon: "*" },
+      { label: "Animal Favorito", value: "Gatos", icon: "*" },
     ]
   },
   {
@@ -59,10 +59,10 @@ const characters: Character[] = [
     fullBody: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=800&fit=crop",
     description: "Um músico talentoso e aventureiro. Tony vive pela música e não perde a chance de explorar novos lugares.",
     funFacts: [
-      { label: "Comida Favorita", value: "Hambúrguer artesanal 🍔", icon: "🎵" },
-      { label: "Instrumento", value: "Guitarra elétrica", icon: "🎸" },
-      { label: "Estilo Musical", value: "Rock Indie", icon: "🎧" },
-      { label: "Bebida", value: "Café preto", icon: "☕" },
+      { label: "Comida Favorita", value: "Hambúrguer artesanal", icon: "*" },
+      { label: "Instrumento", value: "Guitarra elétrica", icon: "*" },
+      { label: "Estilo Musical", value: "Rock Indie", icon: "*" },
+      { label: "Bebida", value: "Café preto", icon: "*" },
     ]
   },
   {
@@ -73,10 +73,10 @@ const characters: Character[] = [
     fullBody: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=800&fit=crop",
     description: "Chef de cozinha apaixonada por experimentação. Olga transforma ingredientes simples em obras-primas gastronômicas.",
     funFacts: [
-      { label: "Comida Favorita", value: "Risoto de funghi 🍄", icon: "👨‍🍳" },
-      { label: "Especialidade", value: "Culinária italiana", icon: "🍝" },
-      { label: "Tempero Preferido", value: "Manjericão fresco", icon: "🌿" },
-      { label: "Sobremesa", value: "Tiramisù", icon: "🍰" },
+      { label: "Comida Favorita", value: "Risoto de funghi", icon: "*" },
+      { label: "Especialidade", value: "Culinária italiana", icon: "*" },
+      { label: "Tempero Preferido", value: "Manjericão fresco", icon: "*" },
+      { label: "Sobremesa", value: "Tiramisù", icon: "*" },
     ]
   },
   {
@@ -87,10 +87,10 @@ const characters: Character[] = [
     fullBody: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop",
     description: "Gamer profissional e streamer. Jeff conquistou milhares de fãs com seu carisma e habilidades incríveis nos jogos.",
     funFacts: [
-      { label: "Comida Favorita", value: "Ramen picante 🍜", icon: "🎮" },
-      { label: "Jogo Favorito", value: "Dark Souls", icon: "⚔️" },
-      { label: "Plataforma", value: "PC Master Race", icon: "💻" },
-      { label: "Snack", value: "Doritos", icon: "🔥" },
+      { label: "Comida Favorita", value: "Ramen picante", icon: "*" },
+      { label: "Jogo Favorito", value: "Dark Souls", icon: "*" },
+      { label: "Plataforma", value: "PC Master Race", icon: "*" },
+      { label: "Snack", value: "Doritos", icon: "*" },
     ]
   },
 ];
@@ -118,14 +118,13 @@ function CharacterCard({ character, onClick }: CharacterCardProps) {
         
         {/* Nome no hover */}
         <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-          <p className="text-sm font-medium">Clique para ver mais</p>
+          <p className={`text-sm font-medium ${DreamOrphans.className}`}>Clique para ver mais</p>
         </div>
       </div>
       
       {/* Nome abaixo da imagem */}
       <div className="mt-3 text-center">
-        <h3 className="text-xl font-bold text-gray-800">{character.name}</h3>
-        <p className="text-sm text-gray-500">Idade: {character.age}</p>
+        <h3 className={`text-xl font-bold text-wanderlust ${ElementaryGothic.className}`}>{character.name}</h3>
       </div>
     </div>
   );
@@ -181,7 +180,7 @@ function CharacterModal({ character, onClose }: CharacterModalProps) {
             
             {/* Descrição */}
             <div>
-              <h3 className="text-xl font-bold text-underdog mb-1 flex items-center gap-2 pt-2">
+              <h3 className={`text-xl font-bold text-underdog mb-1 flex items-center gap-2 pt-2 ${ElementaryGothic.className}`}>
                 {character.name}
               </h3>
               <p className="text-vanished/80 leading-relaxed bg-feisty p-1 rounded-xl">
@@ -191,9 +190,8 @@ function CharacterModal({ character, onClose }: CharacterModalProps) {
 
             {/* Fun Facts */}
             <div>
-              <h3 className="text-xl font-bold text-underdog mb-2 flex items-center gap-2">
-                Fun Facts
-                <span className="text-sm font-normal text-gray-500">(passe o mouse)</span>
+              <h3 className={`font-bold text-underdog mb-2 flex items-center gap-2 ${ElementaryGothic.className}`}>
+                Curiosidades
               </h3>
               
               <div className="space-y-1">
@@ -205,13 +203,12 @@ function CharacterModal({ character, onClose }: CharacterModalProps) {
                     onMouseLeave={() => setHoveredFact(null)}
                   >
                     {/* Card do Fun Fact */}
-                    <div className=" text-vapid p-4 rounded-xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                    <div className={`text-vapid p-4 rounded-xl cursor-pointer hover:shadow-lg transition-all duration-300 transform hover:scale-105 ${DreamOrphans.className}`}>
                       <div className="flex items-center justify-between">
                         <span className="font-semibold flex items-center gap-1">
                           {fact.icon && <span className="text-xl">{fact.icon}</span>}
                           {fact.label}
                         </span>
-                        <span className="">❓</span>
                       </div>
                     </div>
 
@@ -270,10 +267,12 @@ export default function PersonagensSR() {
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className={`text-5xl font-bold text-feisty pb-5 pt-20 ${ElementaryGothic.className}`}>
+        <div className="py-16 text-center pt-6">
+          <h2 className={`text-5xl text-wanderlust pb-2 pt-25 ${DreamOrphans.className}`}>
             Conheça os Slow Risers
           </h2>
+
+          <p className={`${DreamOrphans.className} text-2xl text-feisty`}>Conheça as figuras do mundo de Slow Risers</p>
         </div>
 
         {/* Grid de Personagens */}
@@ -287,10 +286,6 @@ export default function PersonagensSR() {
           ))}
         </div>
 
-        {/* Dica */}
-        <div className="mt-12 text-center text-gray-500 text-sm">
-          💡 Dica: No modal, passe o mouse sobre os Fun Facts para revelar as respostas!
-        </div>
       </div>
 
       {/* Modal */}

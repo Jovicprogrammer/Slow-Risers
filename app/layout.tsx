@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DreamOrphans, Dream_Orphans_Light, ElementaryGothic, Oskon } from './fonts';
+import { DreamOrphans, Dream_Orphans_Light, ElementaryGothic, Oskon, Times } from './fonts';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "vesquicio.",
-  description: "perdido em um sonho febril",
+  title: "Slow Risers",
+  description: "Siga sua percepção",
   icons: {
     icon: '/images/vesquicio-icon.webp', // Note a barra inicial
   },
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${Oskon.variable} ${DreamOrphans.variable} ${ElementaryGothic.variable} ${Dream_Orphans_Light.variable}`}
+        className={`${Oskon.variable} ${DreamOrphans.variable} ${ElementaryGothic.variable} ${Dream_Orphans_Light.variable} ${Times.className}`}
       >
         {children}
       </body>

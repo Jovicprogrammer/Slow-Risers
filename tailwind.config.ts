@@ -1,6 +1,6 @@
 // tailwind.config.js
 
-import { DreamOrphans, ElementaryGothic, Oskon } from "@/app/fonts";
+import { DreamOrphans, ElementaryGothic, Oskon, Times } from "@/app/fonts";
 
 const config = {
   content: [
@@ -15,6 +15,7 @@ theme: {
         gothic: ['var(--font-gothic)'],
         oskons: ['var(--font-oskon)'],
         lightdream: ['var(--font-lightdream)'],
+        times: ['var(--font-times)'],
       },
     },
   },    

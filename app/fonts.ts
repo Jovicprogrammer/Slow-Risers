@@ -45,3 +45,15 @@ export const Dream_Orphans_Light = localFont({
   variable: '--font-light-dream',
   display: 'swap',
 });
+
+export const Times = localFont({
+  src: [
+    {
+      path: './fonts/times.ttf',
+      weight: '300',
+    },
+
+  ],
+  variable: '--font-times',
+  display: 'swap',
+});

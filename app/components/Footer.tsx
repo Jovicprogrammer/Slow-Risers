@@ -8,7 +8,7 @@ export default function FooterSR() {
 
     return (
 
-        <div className={`flex items-center justify-center h-10 pt-10 pb-10 ${Dream_Orphans_Light.className}`}>
+        <div className={`flex text-wanderlust/60 items-center justify-center h-10 pt-10 pb-10 ${Dream_Orphans_Light.className}`}>
 
         <p>Vesquicio. {currentYear}</p>
 

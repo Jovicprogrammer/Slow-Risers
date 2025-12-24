@@ -6,7 +6,7 @@ export default function CapaSR() {
 
     return (
 
-        <div className="flex flex-col items-center justify-center h-screen pt-20">
+        <div className="flex flex-col items-center justify-center h-screen pt-45">
 
         <h1 className={`text-6xl ${DreamOrphans.className}`}>Vesquicio lhe dá boas vindas!!</h1>
 

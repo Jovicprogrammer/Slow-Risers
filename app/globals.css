@@ -31,3 +31,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@utility no-scrollbar {
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+/* global.css */
+::-webkit-scrollbar {
+  width: 6px; /* largura da barra vertical */
+  height: 6px; /* altura da barra horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #0A747B;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ADE280; /* cor do "thumb" (laranja Tailwind) */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ADE280; /* cor ao passar o mouse */
+}

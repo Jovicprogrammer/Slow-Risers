@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import NavbarSR from '../components/Navbar';
-import { ElementaryGothic } from '../fonts';
+import { DreamOrphans, ElementaryGothic } from '../fonts';
 import FooterSR from '../components/Footer';
 
 // Tipos
@@ -145,7 +145,7 @@ function MapMarker({ location, onClick }: { location: Location; onClick: () => v
         </div>
         
         {/* Tooltip no hover */}
-        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-xl">
+        <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 px-3 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-xl ${DreamOrphans.className}`}>
           {location.name}
           <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900" />
         </div>
@@ -187,7 +187,7 @@ function LocationModal({ location, onClose }: LocationModalProps) {
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
               </svg>
             </div>
-            <h2 className="text-3xl font-bold text-underdog">{location.name}</h2>
+            <h2 className={`text-2xl font-bold text-underdog ${ElementaryGothic.className}`}>{location.name}</h2>
           </div>
           <button
             onClick={onClose}
@@ -272,7 +272,7 @@ function LocationModal({ location, onClose }: LocationModalProps) {
             {/* Descrição */}
             <div>
 
-              <p className="text-vanished/80 leading-relaxed p-4 rounded-xl">
+              <p className={`text-vanished/80 leading-relaxed p-4 rounded-xl `}>
                 {location.description}
               </p>
             </div>
@@ -280,14 +280,14 @@ function LocationModal({ location, onClose }: LocationModalProps) {
             {/* Fatos */}
             {location.facts && location.facts.length > 0 && (
               <div>
-                <h3 className="text-xl font-bold text-underdog mb-3 flex items-center gap-2">
+                <h3 className={` font-bold text-underdog mb-3 flex items-center gap-2 ${ElementaryGothic.className}`}>
                 Curiosidades
                 </h3>
                 <ul className="space-y-2">
                   {location.facts.map((fact, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-3 bg-wanderlust/30 p-3 rounded-lg"
+                      className={`flex items-start gap-3 bg-wanderlust/30 p-3 rounded-lg `}
                     >
                       <span className="text-vapid font-bold">•</span>
                       <span className="text-vanished/80">{fact}</span>
@@ -332,10 +332,14 @@ export default function MapaSR() {
         
         
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className={`text-5xl font-bold text-feisty pb-7 pt-25 ${ElementaryGothic.className}`}>
+        <div className={`text-center py-16 pt-6 ${DreamOrphans.className}`}>
+          <h2 className={`text-5xl text-wanderlust pb-2 pt-25 `}>
           Conheça Drollhaven
           </h2>
+
+        <p className='text-2xl font-light text-feisty'>
+        Explore o mundo e personagens de Slow Risers
+        </p>
         </div>
 
         {/* Container do Mapa */}
@@ -367,7 +371,7 @@ export default function MapaSR() {
 
           {/* Legenda */}
           <div className="p-6 bg-linear-to-r from-purple-50 to-blue-50 border-t border-gray-200">
-            <h3 className="text-lg font-bold text-gray-800 mb-3">Localizações Disponíveis:</h3>
+            <h3 className={`text-sm font-bold text-gray-800 mb-3 ${ElementaryGothic.className}`}>Localizações Disponíveis:</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {locations.map((location) => (
                 <button
@@ -376,7 +380,7 @@ export default function MapaSR() {
                   className="flex items-center gap-2 bg-white p-3 rounded-lg hover:shadow-md transition-all duration-200 hover:scale-105 cursor-pointer"
                 >
                   <div className={`${location.pinColor || 'bg-red-500'} w-4 h-4 rounded-full`} />
-                  <span className="text-sm font-medium text-gray-700">{location.name}</span>
+                  <span className={`text-sm font-medium text-gray-700 ${DreamOrphans.className}`}>{location.name}</span>
                 </button>
               ))}
             </div>
