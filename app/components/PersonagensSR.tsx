@@ -39,7 +39,7 @@ interface CharacterModalProps {
 const characters: Character[] = [
   {
     id: 1,
-    name: "Bella",
+    name: "Ramón Rameiro",
     age: 21,
     thumbnail: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop",
     fullBody: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&h=800&fit=crop",
@@ -81,6 +81,48 @@ const characters: Character[] = [
   },
   {
     id: 4,
+    name: "Jeff",
+    age: 23,
+    thumbnail: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+    fullBody: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop",
+    description: "Gamer profissional e streamer. Jeff conquistou milhares de fãs com seu carisma e habilidades incríveis nos jogos.",
+    funFacts: [
+      { label: "Comida Favorita", value: "Ramen picante", icon: "*" },
+      { label: "Jogo Favorito", value: "Dark Souls", icon: "*" },
+      { label: "Plataforma", value: "PC Master Race", icon: "*" },
+      { label: "Snack", value: "Doritos", icon: "*" },
+    ]
+  },
+  {
+    id: 5,
+    name: "Jeff",
+    age: 23,
+    thumbnail: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+    fullBody: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop",
+    description: "Gamer profissional e streamer. Jeff conquistou milhares de fãs com seu carisma e habilidades incríveis nos jogos.",
+    funFacts: [
+      { label: "Comida Favorita", value: "Ramen picante", icon: "*" },
+      { label: "Jogo Favorito", value: "Dark Souls", icon: "*" },
+      { label: "Plataforma", value: "PC Master Race", icon: "*" },
+      { label: "Snack", value: "Doritos", icon: "*" },
+    ]
+  },
+  {
+    id: 6,
+    name: "Jeff",
+    age: 23,
+    thumbnail: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
+    fullBody: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop",
+    description: "Gamer profissional e streamer. Jeff conquistou milhares de fãs com seu carisma e habilidades incríveis nos jogos.",
+    funFacts: [
+      { label: "Comida Favorita", value: "Ramen picante", icon: "*" },
+      { label: "Jogo Favorito", value: "Dark Souls", icon: "*" },
+      { label: "Plataforma", value: "PC Master Race", icon: "*" },
+      { label: "Snack", value: "Doritos", icon: "*" },
+    ]
+  },
+  {
+    id: 7,
     name: "Jeff",
     age: 23,
     thumbnail: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
@@ -269,15 +311,17 @@ export default function PersonagensSR() {
         {/* Header */}
         <div className="py-16 text-center pt-6">
           <h2 className={`text-5xl text-wanderlust pb-2 pt-25 ${DreamOrphans.className}`}>
-            Conheça os Slow Risers
+          Conheça os Personagens
           </h2>
 
-          <p className={`${DreamOrphans.className} text-2xl text-feisty`}>Conheça as figuras do mundo de Slow Risers</p>
+          <p className={`${DreamOrphans.className} text-2xl text-feisty`}>Um elenco de figuras interessantes</p>
         </div>
+
+        <h3 className={`text-4xl text-wanderlust text-center pb-5 ${DreamOrphans.className}`}>Os Slow Risers</h3>
 
         {/* Grid de Personagens */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {characters.map((character) => (
+          {characters.slice(0,6).map((character) => (
             <CharacterCard
               key={character.id}
               character={character}
@@ -285,6 +329,20 @@ export default function PersonagensSR() {
             />
           ))}
         </div>
+
+        <h3 className={`text-4xl text-wanderlust text-center pt-10 pb-5 ${DreamOrphans.className}`}>Os Slow Risers</h3>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {characters.slice(4,6).map((character) => (
+            <CharacterCard
+              key={character.id}
+              character={character}
+              onClick={() => setSelectedCharacter(character)}
+            />
+          ))}
+        </div>
+
+
 
       </div>
 

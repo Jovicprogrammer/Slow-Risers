@@ -28,7 +28,7 @@ interface LocationModalProps {
 const locations: Location[] = [
   {
     id: 1,
-    name: "Fornia",
+    name: "Pommeria",
     x: 25,
     y: 30,
     description: "A capital do reino, uma cidade próspera cercada por muralhas antigas. Conhecida por seus mercados vibrantes e torres imponentes.",
@@ -46,7 +46,7 @@ const locations: Location[] = [
   },
   {
     id: 2,
-    name: "Olby",
+    name: "Trashlândia",
     x: 70,
     y: 25,
     description: "Uma vila portuária tranquila, onde pescadores vivem em harmonia. O pôr do sol reflete nas águas calmas da baía.",
@@ -63,7 +63,7 @@ const locations: Location[] = [
   },
   {
     id: 3,
-    name: "Wolfe's Den",
+    name: "Malvalles",
     x: 45,
     y: 65,
     description: "Uma floresta densa e misteriosa, lar de criaturas selvagens. Dizem que lobos gigantes protegem seus segredos mais profundos.",
