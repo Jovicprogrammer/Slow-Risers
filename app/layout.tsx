@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Slow Risers",
   description: "Siga sua percepção",
   icons: {
-    icon: '/images/vesquicio-icon.webp', // Note a barra inicial
+    icon: '/images/Site-favicon.webp', // Note a barra inicial
   },
 };
 

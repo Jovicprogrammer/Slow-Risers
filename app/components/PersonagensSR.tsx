@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { X, Heart } from 'lucide-react';
+import { X } from 'lucide-react';
 import NavbarSR from '../components/Navbar';
 import { DreamOrphans, ElementaryGothic } from '../fonts';
 import FooterSR from '../components/Footer';
